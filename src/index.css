@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-primary-pink: #FF4FA3;
+  --color-accent-pink: #FF85C2;
+  --color-light-pink: #FFD6E8;
+  --color-bg-pink: #FFF9FC;
+  --color-text-dark: #2D2D2D;
+  --color-text-muted: #666666;
+  --color-pink-border: #F5C2D7;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg-pink);
+    color: var(--color-text-dark);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    color: var(--color-text-dark);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom Scrollbar styled elegantly */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-pink);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-light-pink);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-pink);
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(245, 194, 215, 0.4);
+}
+
+.glass-card {
+  background: #ffffff;
+  border: 1px solid rgba(245, 194, 215, 0.5);
+  box-shadow: 0 4px 20px -2px rgba(255, 79, 163, 0.04);
+}
+
+.pink-gradient {
+  background: linear-gradient(135deg, #FF4FA3 0%, #FF85C2 100%);
+}
+
+.pink-gradient-text {
+  background: linear-gradient(135deg, #FF4FA3 0%, #FF85C2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
